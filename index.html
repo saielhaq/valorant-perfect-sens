@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfect Sens Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h2>Valorant Sensitivity Adjustment Tool</h2>
+        <p>
+          This tool allows you to adjust your sensitivity by calculating a lower
+          and higher sensitivity based on your input.
+        </p>
+        <h3>How to Use:</h3>
+        <ol>
+          <li>Enter your current sensitivity when prompted.</li>
+          <li>Go to the range and practice shooting bots.</li>
+          <ul>
+            <li>
+              <strong>Overflicking</strong>: If you tend to overflick, click
+              "Lower" to calculate a sensitivity that is half of your original.
+            </li>
+            <li>
+              <strong>Underflicking</strong>: If you tend to underflick, click
+              "Higher" to calculate a sensitivity that is double your original.
+            </li>
+          </ul>
+          <li>
+            Repeat steps 1 and 2 until you find a sensitivity that suits you.
+          </li>
+        </ol>
+      </div>
+      <div>
+        <label for="sens">Sens</label>
+        <input
+          type="number"
+          step="0.01"
+          min="0.01"
+          max="10"
+          id="sens"
+          v-model="calculatedSens"
+        />
+        <button v-on:click="lower">Lower</button>
+        <button v-on:click="higher">Higher</button>
+        <p>
+          Made by <a href="https://github.com/saielhaq" target="_blank">Saay</a>
+        </p>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
